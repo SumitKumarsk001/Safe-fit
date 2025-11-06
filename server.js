@@ -9,7 +9,7 @@ app.use(express.static("public"));
 
 
 // Gemini API key
-const GEMINI_API_KEY = "AIzaSyCAF0Ojvg3euhS8l04PdfZRskzyidAZ91o";
+// const GEMINI_API_KEY = "AIzaSyCAF0Ojvg3euhS8l04PdfZRskzyidAZ91o";
 
 // Initialize Gemini
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
@@ -37,3 +37,4 @@ app.post("/generate", async (req, res) => {
 });
 
 app.listen(3000, () => console.log("✅ Server running on http://localhost:3000"));
+
