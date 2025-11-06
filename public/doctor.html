@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Doctor’s Advice – Safe-Fit</title>
+  <link rel="stylesheet" href="doctor.css">
+  
+</head>
+<body>
+  <nav>
+    <div class="logo">Safe-fit</div>
+    <div class="right">
+      <a href="index.html" class="btn1">Home</a>
+      <a href="history.html" class="btn1">History</a>
+      <button class="btn1" id="logout">Logout</button>
+    </div>
+  </nav>
+
+  <section class="advice-section">
+    <h2>🏥 Doctor’s Advice </h2>
+    <p>Read safety advice </p>
+
+    <div id="advice-container"></div>
+
+    <!-- <h3>📍 Find Nearby Doctors</h3>
+    <input id="map-search" type="text" placeholder="Search hospitals, doctors, or clinics...">
+    <div id="map"></div> -->
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Safe-fit Health Solutions</p>
+  </footer>
+
+  <script src="doctor.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDb-E1ORR3UF1M7jUFjGprAtVfG_qCMg1M&libraries=places&callback=initMap"async
+  defer></script>
+</body>
+</html>

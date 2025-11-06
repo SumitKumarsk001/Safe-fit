@@ -1,0 +1,448 @@
+
+
+   /* === Safe-Fit Home Page - Modern Responsive Design === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Background and Body Setup */
+body {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #a8edea, #fed6e3);
+  background-attachment: fixed;
+  overflow-x: hidden;
+  color: #222;
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 50px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 35px;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: 1px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.right .btn1 {
+  font-size: 20px;
+  border-radius: 30px;
+  padding: 10px 20px;
+  border: none;
+  color: #fff;
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.right .btn1:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #185a9d, #43cea2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+a{
+  text-decoration: none;
+}
+
+/* Main Headings */
+.body-heading {
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  margin: 80px 20px 20px;
+  color: #222;
+}
+
+.body-para {
+  font-size: 25px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Info Cards */
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 0 30px;
+}
+
+.card {
+  width: 350px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 30px 20px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.card i {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #185a9d;
+}
+
+.card h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.card p {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #444;
+}
+
+/* Form Section */
+form {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 700px;
+  margin: 100px auto;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-heading {
+  font-size: 35px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.form-para {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #444;
+  line-height: 1.5;
+}
+
+label {
+  font-size: 20px;
+  font-weight: 600;
+  align-self: flex-start;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+select,
+input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 20px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+select:focus,
+input:focus {
+  border-color: #43cea2;
+  box-shadow: 0 0 8px rgba(67, 206, 162, 0.4);
+}
+
+/* Submit Button */
+.btn-submit {
+  font-size: 25px;
+  padding: 12px 30px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  background: linear-gradient(135deg, #185a9d, #43cea2);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Result Box */
+pre {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 16px;
+  color: #222;
+  width: 90%;
+  /* max-width: 800px; */
+  margin: 40px auto;
+  overflow-x: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* For Tablets */
+@media (max-width: 1024px) {
+  nav {
+    padding: 20px 30px;
+  }
+
+  .body-heading {
+    font-size: 36px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form {
+    margin-top: 60px;
+    width: 95%;
+  }
+}
+
+/* For Mobile Devices */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 26px;
+  }
+
+  .right .btn1 {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .body-heading {
+    font-size: 28px;
+    margin: 50px 10px 20px;
+  }
+
+  .body-para {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  form {
+    padding: 25px 20px;
+  }
+
+  .form-heading {
+    font-size: 26px;
+  }
+
+  .btn-submit {
+    font-size: 16px;
+    width: 100%;
+  }
+}
+
+
+
+#history-container {
+  width: 90%;
+  max-width: 1500px;          /* keeps it centered on large screens */
+  margin: 20px auto;          /* centers container horizontally */
+  padding: 20px;
+  box-sizing: border-box;
+  max-height: 65vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  border-top: 2px solid rgba(0,0,0,0.1);
+  border-bottom: 2px solid rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+/* Scrollbar styling (optional) */
+#history-container::-webkit-scrollbar {
+  width: 8px;
+}
+#history-container::-webkit-scrollbar-thumb {
+  background: #7be2c1;
+  border-radius: 6px;
+}
+
+/* Cards inside */
+#history-container .card {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 20px;
+  background: #f6fffc;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* -------- Responsive Tweaks -------- */
+
+/* Tablets and small laptops */
+@media (max-width: 1024px) {
+  #history-container {
+    width: 95%;
+    padding: 15px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+  #history-container {
+    width: 95%;
+    margin: 10px auto;
+    padding: 12px;
+    max-height: 60vh;
+    border-radius: 10px;
+  }
+
+  #history-container .card {
+    font-size: 15px;
+    padding: 15px;
+  }
+}
+
+/* footer */
+
+/* ---------- FOOTER STYLING ---------- */
+.footer {
+  background: linear-gradient(90deg, #aef2f5, #dd91ba);
+  color: #0b3d2e;
+  padding: 30px 20px 15px;
+  text-align: center;
+  margin-top: 160px;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+  border-top: 2px solid rgba(0,0,0,0.1);
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+ .footer-logo {
+  font-size: 35px;
+  font-weight: bold;
+  background: #222;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+
+.footer-text {
+  font-size: 20px;
+  color: #044930;
+  margin-bottom: 15px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #044930;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s;
+  font-size: 25px;
+  text-shadow: goldenrod;
+}
+
+/* .footer-links a:hover {
+  color: #4bb7ed;
+} */
+ .footer-links a:hover {
+  background: linear-gradient(90deg, #007f5f, #00b894);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.4s ease;
+}
+
+
+.footer-bottom {
+  font-size: 16px;
+  color: #044930;
+  margin-top: 15px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 10px;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+@media (max-width: 768px) {
+  .footer {
+    padding: 25px 15px 10px;
+  }
+
+  .footer-logo {
+    font-size: 20px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-text {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+  }
+}

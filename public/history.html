@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Workout Plan History</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <nav>
+    <div class="logo">Safe-fit</div>
+    <div class="right">
+      <button class="btn1" onclick="window.location.href='/index.html'">Home</button>
+      <button class="btn1" id="logout" type="button">Logout</button>
+    </div>
+  </nav>
+
+  <h2 class="body-heading">🏋️‍♀️ Your Workout Plan History</h2>
+  <p class="body-para">All your previously generated plans are saved here.</p>
+
+  <div id="history-container" ></div>
+  <button id="clearHistory" class="btn-submit" style="margin-left:40px;">Clear History</button>
+
+  <!-- footer -->
+   <footer class="footer">
+  <div class="footer-content">
+    <div class="footer-logo">Safe-fit</div>
+    <p class="footer-text">
+      Empowering safe recovery through smart, AI-driven workout guidance.
+    </p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="history.html">History</a>
+      <a href="login.html">Login</a>
+      <a href="signup.html">Signup</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 Safe-fit | Designed for safe recovery and strength
+  </div>
+</footer>
+
+
+  <script>
+    const logoutBtn = document.getElementById("logout");
+    const container = document.getElementById("history-container");
+    const clearBtn = document.getElementById("clearHistory");
+
+    // ✅ Check login
+    if (localStorage.getItem("isLoggedIn") !== "true") {
+      alert("Please log in first!");
+      window.location.href = "/login.html";
+    }
+
+    // ✅ Show history
+    function loadHistory() {
+      const history = JSON.parse(localStorage.getItem("planHistory")) || [];
+      container.innerHTML = "";
+
+      if (history.length === 0) {
+        container.innerHTML = "<p style='font-size:22px;'>No workout plans found.</p>";
+        return;
+      }
+
+      history.forEach((entry, index) => {
+        const div = document.createElement("div");
+        div.classList.add("card");
+        div.innerHTML = `
+          <h3>Plan #${index + 1}</h3>
+          <p><b>Date:</b> ${entry.date}</p>
+          <pre style="background:#f9f9f9;padding:15px;border-radius:10px;">${entry.plan}</pre>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    // ✅ Clear history
+    clearBtn.addEventListener("click", () => {
+      if (confirm("Are you sure you want to delete all saved plans?")) {
+        localStorage.removeItem("planHistory");
+        loadHistory();
+      }
+    });
+
+    // ✅ Logout
+    logoutBtn.addEventListener("click", () => {
+      localStorage.removeItem("isLoggedIn");
+      window.location.href = "/login.html";
+    });
+
+    loadHistory();
+  </script>
+</body>
+</html>

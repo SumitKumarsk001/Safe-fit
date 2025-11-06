@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Injury Recovery Workout Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <nav>
+    <div class="logo">Safe-fit</div>
+    <div class="right">
+      <a href="doctor.html" class="btn1">Doctor’s Advice</a>
+
+      <button class="btn1" id="login" type="button">Login</button>
+      <button class="btn1" id="signup" type="button">Signup</button>
+      <button class="btn1" id="logout" type="button" style="display:none;">Logout</button>
+    </div>
+  </nav>
+  <h2 class="body-heading"><i class="fa-solid fa-heart-pulse fa-beat-fade" style="color: #a2061d;"></i> Safe-Fit Injury Recovery Workouts Plan </h2>
+  <p class="body-para">Get personalized, safe workout routines designed specifically for your injury type and recovery stage. Built with expert knowledge and AI precision.</p>
+  <div class="cards">
+<div class="card">
+  <i class="fa-solid fa-brain" style="color: #ce9b79;"></i>
+    <h3>Safety First</h3>
+    <p>Every routine is designed with your injury in mind, prioritizing safe recovery over quick results.</p>
+  </div>
+  <div class="card">
+    <i class="fa-solid fa-user-doctor"></i>
+    <h3>Personalized Plans</h3>
+    <p>AI analyzes your specific injury, fitness level, and goals to create a tailored recovery program.</p>
+  </div>
+  <div class="card">
+    <i class="fa-solid fa-bolt" style="color: #4fe7a0;"></i>
+    <h3>Expert Knowledge</h3>
+    <p>Built on physical therapy principles and certified training expertise for optimal recovery.</p>
+  </div>
+  </div>
+  
+  <form id="form">
+    <h2 class="form-heading">Tell Us About Your Injury</h2>
+    <p class="form-para">Provide details about your injury so we can create a safe, personalized workout plan</p>
+    <label for="">Type of Injury *</label>
+    <!-- <input name="injury" placeholder="Injury type (e.g., Knee)" required> -->
+     <select name="injury" id="type-injury">
+      <option value="" >Select Injury Type </option>
+      <option value="Knee Injury">Knee Injury</option>
+      <option value="Shoulder Injury">Shoulder Injury</option>
+      <option value="Back Injury">Back Injury</option>
+      <option value="Ankel Injury">Ankel Injury</option>
+      <option value="Wrist/Hand Injury">Wrist/Hand Injury</option>
+      <option value="Neck Injury">Neck Injury</option>
+     </select>
+     <label for="">Recovery stage *</label>
+    <!-- <input name="stage" placeholder="Recovery stage (e.g., Moderate)" required> -->
+     <select name="stage" id="recovery-stage">
+      <option value="" >Select stages </option>
+      <option value="Mild-Minor discomfort,recently occured">Mild-Minor discomfort,recently occured</option>
+      <option value="Moderate-Some pain, limited mobility">Moderate-Some pain, limited mobility</option>
+      <option value="Recovering-Past-injury,building strength">Recovering-Past-injury,building strength</option>
+     </select>
+     <label for="">Current Fitness level *</label>
+    <!-- <input name="level" placeholder="Fitness level (e.g., Beginner)" required> -->
+     <select name="level" id="fitness-level">
+      <option value="" >Select fitness level</option>
+      <option value="Beginner-Little to no exercise experience">Beginner-Little to no exercise experience</option>
+      <option value="Intermediate-Regular exercise routine">Intermediate-Regular exercise routine</option>
+      <option value="Advanced- Experienced athlete">Advanced- Experienced athlete</option>
+     </select>
+    <button type="submit" class="btn-submit">Generate workout Plan</button>
+    <button type="button" class="btn-submit" onclick="window.location.href='/history.html'">View Plan History</button>
+
+  </form>
+  <pre id="result"></pre>
+
+  <footer class="footer">
+  <div class="footer-content">
+    <div class="footer-logo">Safe-fit</div>
+    <p class="footer-text">
+      Empowering safe recovery through smart, AI-driven workout guidance.
+    </p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="history.html">History</a>
+      <a href="login.html">Login</a>
+      <a href="signup.html">Signup</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 Safe-fit | Designed for safe recovery and strength
+  </div>
+</footer>
+
+  
+  <script src="index.js"></script>
+  
+</body>
+</html>
